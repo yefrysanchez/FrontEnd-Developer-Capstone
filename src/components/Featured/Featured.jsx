@@ -11,7 +11,7 @@ const foods = [
     food: "Bruchetta",
     price: "5.99",
     info: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.",
-    img: "/bruchetta.svg", 
+    img: "/bruchetta.svg",
   },
   {
     food: "Lemon Dessert",
@@ -29,16 +29,14 @@ const Featured = () => {
           This Week&apos;s Specials!
         </h2>
 
-        <button 
-          className="bg-yellow hover:bg-olive hover:text-yellow transition-colors duration-300 cursor-pointer py-2 px-8 rounded-lg"
-        >
+        <button className="bg-yellow hover:bg-olive hover:text-yellow transition-colors duration-300 cursor-pointer py-2 px-8 rounded-lg">
           Online Menu
         </button>
       </div>
 
       <article className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
         {foods.map((food) => (
-          <CardOrder key={food.food} food={food} /> 
+          <CardOrder key={food.food} food={food} />
         ))}
       </article>
     </section>
