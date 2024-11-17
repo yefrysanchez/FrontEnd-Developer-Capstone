@@ -12,7 +12,8 @@ export default {
         cream: "#FBDABB",
         salmon: "#EE9972",
         white: "#EDEDEE",
-        black: "#333333"
+        black: "#333333",
+        gray: "#D9D9D9"
       },
       borderRadius: {
         corners: "16px"
