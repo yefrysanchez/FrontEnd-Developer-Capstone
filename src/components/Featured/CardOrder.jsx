@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 const CardOrder = ({ food }) => {
   return (
-    <div className="overflow-hidden hover:scale-105 transition rounded-corners w-full max-w-[282px] bg-gray h-[406px] relative">
-      <div className="h-[186px]">
+    <div className="overflow-hidden rounded-corners w-full bg-gray-100 md:h-[406px] shadow-sm relative">
+      <div className="h-fit md:h-[186px]">
         <img
           className="w-full h-full object-cover"
           src={food.img}
@@ -12,11 +12,11 @@ const CardOrder = ({ food }) => {
       </div>
       <div className="p-4 h-full">
         <div className="flex justify-between text-lg mb-4">
-          <span className="font-bold font-serif text-base">{food.food}</span>
-          <span className="text-olive">${food.price}</span>
+          <span className="font-bold text-base">{food.food}</span>
+          <span className="text-salmon font-bold ">${food.price}</span>
         </div>
-        <p className="text-olive text-lg leading-5">{food.info}</p>
-        <button className="font-bold flex items-center gap-2 absolute bottom-4 right-4">
+        <p className="text-olive text-lg leading-5 mb-4 md:mb-0">{food.info}</p>
+        <button className="font-bold flex items-center gap-2 md:absolute bottom-4 right-4">
           <span>Order Delivery</span>
           <span>
             <img src="/deliveryIcon.svg" alt="Delivery Icon" />

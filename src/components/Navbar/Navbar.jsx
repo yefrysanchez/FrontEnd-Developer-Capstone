@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex">
+    <header className="flex z-50 sticky top-0 left-0 bg-white">
       <div className="maxWidth flex items-center justify-between px-2 py-4">
         {/* Hamburger menu button */}
         <button onClick={() => setIsOpen(true)} className="md:hidden">
@@ -14,7 +14,7 @@ const Navbar = () => {
         </button>
         {/* Navigation */}
         <nav
-          className={`fixed inset-0 ${isOpen ? "left-0" : "-left-[100%]"} transition-all duration-200 bg-white flex flex-col gap-[3rem] md:flex-row w-full md:static`}
+          className={`fixed z-50 inset-0 ${isOpen ? "left-0" : "-left-[100%]"} transition-all duration-200 bg-white flex flex-col gap-[3rem] md:flex-row w-full md:static`}
         >
           {/* Close button */}
           <button
@@ -43,7 +43,7 @@ const Navbar = () => {
             ))}
             <li
               onClick={() => setIsOpen(false)}
-              className="bg-yellow hover:opacity-90 cursor-pointer py-2 px-4 rounded-corners"
+              className="bg-yellow hover:bg-olive hover:text-yellow transition-colors duration-300 cursor-pointer py-2 px-4 rounded-corners"
             >
               Order Online
             </li>
