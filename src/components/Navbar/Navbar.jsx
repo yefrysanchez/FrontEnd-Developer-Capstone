@@ -41,7 +41,7 @@ const Navbar = () => {
             {links.map((link) => (
               <li
                 onClick={() => setIsOpen(false)}
-                key={link}
+                key={link.title}
                 className="capitalize hover:text-olive transition-colors"
               >
                 <Link to={`${link.path.toLowerCase()}`}>{link.title}</Link>
