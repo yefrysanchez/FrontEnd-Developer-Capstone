@@ -1,13 +1,12 @@
 import "./App.css";
 import Layout from "./layout/Layout";
-
-import Home from "./pages/Home/Home";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <div className="bg-white min-h-screen">
       <Layout>
-        <Home />
+        <AppRouter />
       </Layout>
     </div>
   );

@@ -1,7 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const links = ["home", "about", "menu", "reservations"];
+  const links = [
+    { title: "home", path: "/" },
+    { title: "about", path: "/about" },
+    { title: "menu", path: "/menu" },
+    { title: "reservations", path: "/reservations" }
+  ];
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,7 +44,7 @@ const Navbar = () => {
                 key={link}
                 className="capitalize hover:text-olive transition-colors"
               >
-                <a href={`#${link.toLowerCase()}`}>{link}</a>
+                <Link to={`${link.path.toLowerCase()}`}>{link.title}</Link>
               </li>
             ))}
             <li
