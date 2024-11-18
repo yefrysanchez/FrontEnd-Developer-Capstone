@@ -1,5 +1,6 @@
 
 import { FaCircleCheck } from 'react-icons/fa6'
+import propTypes from "prop-types"
 
 const Confirmation = ({setIsReserved}) => {
   return (
@@ -15,3 +16,7 @@ const Confirmation = ({setIsReserved}) => {
 }
 
 export default Confirmation
+
+Confirmation.propTypes = {
+    setIsReserved: propTypes.func.isRequired
+}
